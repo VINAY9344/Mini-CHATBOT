@@ -1,0 +1,172 @@
+import random
+from tkinter import *
+
+# GUI
+
+root = Tk()
+
+root.title("Chatbot")
+
+BG_GRAY = "#ABB2B9"
+
+BG_COLOR = "#17202A"
+
+TEXT_COLOR = "#EAECEE"
+
+FONT = "Helvetica 14"
+
+FONT_BOLD = "Helvetica 13 bold"
+
+
+
+# Send function
+
+def send():
+    h = ["hi", "hello", "hello, is there anyone here?"]
+    n = ["whats your name", "what is your name", "do you have any name", "what should i call you"]
+    a = ["what is your address", "address"]
+    i = ["contact", "contact details"]
+    g2 = ["How are you?","kaise ho?"]
+    g3 = ["what are your views on nitin sir","tell me about nitin sir","do you know nitin sir"]
+    s = ["total number of students", "total students","total number of students in bca","how many numbers of students are in bca"]
+    f = ["total number of faculties", "total faculties","total number of faculties in bennett","how many numbers of faculties in Bennett"]
+    d1 = ["total number of courses in Bennett", "how many courses are available in Bennett", "number of courses","total number of courses"]
+    d2 = ["different courses in Bennett","courses offer by Bennett"]
+    a3 = ["total number of alumni", "total alumni","total number of alumni in Bennett","numbers of alumni in Bennett"]
+    l = ["total number of laboratories", "total laboratories","total number of laboratories in Bennett","numbers of laboratories in Bennett","number of labs"]
+    a1 = ["Bennett affiliated to", "bennett affiliated with"]
+    a2 = ["bennett approved by","What is Bennett approved by"]
+    y = ["establishment year of Bennett", "in which year Bennett was established", "establishment year"]
+    j = ["website of Bennett", "website"]
+    g = ["fee of Bennett", "fee details", "fee information"]
+    z = ["timings of Classes", "time of classes & when does it end"]
+    x = ["award winning", "how many awards are won by bennett"]
+    k = ["mass recruiters companies in Bennett", "which companies are take maximum students"]
+    c = ["infrastructure of Bennett", "infrastructure"]
+    d3 = ["who is your developer", "developer information","developer info"]
+    b = ["cya", "see you later", "bye", "goodbye", "i am leaving"]
+    send = "You -> " + e.get()
+
+    txt.insert(END, "\n" + send)
+
+    user = e.get().lower()
+
+    if user in h:
+        botanswer = ["Hello !", "Hi", "hello, How can I help you", "Welcome"]
+
+
+        txt.insert(END, "\n" + "Bot -> "+ random.choice(botanswer))
+
+
+    elif user in n:
+
+        txt.insert(END, "\n" + "Bot -> My name is CHATBOT SINGH.")
+
+
+    elif user in a:
+
+        txt.insert(END, "\n" + "Bot ->ask Vinay bhandari 110065")
+
+    elif user in i:
+        txt.insert(END,
+                   "\n" + "Bot ->  \t Email id - vinaybhandari2002@gmail.com / contact no. 9999550476 ")
+        
+
+    elif user in g2:
+        txt.insert(END, "\n"+ "Bot ->    I'm just a computer program, so I don't have feelings, but thanks for asking!")
+        
+        
+    elif user in g3:
+        txt.insert(END, "\n"+ "Bot ->    Nitin sir is AI faculty of bca second year students and he is really good in teaching")
+
+
+    elif user in s:
+        txt.insert(END, "\n" + "Bot -> 140 Students approximately")
+
+
+    elif user in f:
+        txt.insert(END, "\n" + "Bot -> in a Semester bca have 6-7 faculties following the same for other computer science courses")
+
+    elif user in d1:
+        botanswer = ["There are 3 courses available in computer science","Bennett offers 16 different courses "]
+        txt.insert(END, "\n" + "Bot -> "+ random.choice(botanswer))
+
+    elif user in d2:
+        txt.insert(END, "\n" +  "Bot -> " + "CSE, ECE, IT, ME, EE, CSBS,\n           AIML, CSE(IOT & CSIBCT), CE,  \n            BBA, BBA(HM) ,CA(BCA, MCA), BSHU")
+
+    elif user in a3:
+        txt.insert(END, "\n" + "Bot -> 10000+ Alumni")
+
+    elif user in l:
+        txt.insert(END, "\n" + "Bot -> 80 Laboratories approx")
+
+    elif user in a1:
+        txt.insert(END, "\n" + "Bot -> Bennett is private university and is not affiliated with anyone")
+
+    elif user in a2:
+        txt.insert(END, "\n" + "Bot -> Bennett is approved by every org which is for private university")
+
+    elif user in y:
+        txt.insert(END, "\n" + "Bot -> bennett Established in 2016")
+
+    elif user in j:
+        txt.insert(END, "\n" + "Bot -> https://www.bennett.edu.in/ ")
+
+
+    elif user in g:
+        txt.insert(END,
+                   "\n" + "Bot ->  \tFee of B.Tech -> 500000 \n\t Fee of M.tech -> 195000\n\t Fee of BCA -> 280000\n\t Fee of MCA -> 240000\n\t Fee of BBA -> 270000")
+
+
+    elif user in z:
+        botanswer = [ "Monday to Friday 9:30 am - 5:30 pm", "8:30 am to 4:30-5:30 pm approx "]
+
+        txt.insert(END, "\n" + "Bot -> " + random.choice(botanswer))
+
+    elif user in x:
+        txt.insert(END, "\n" + "Bot -> Bennett won 25 Awards")
+
+
+    elif user in k:
+        txt.insert(END, "\n" + "Bot -> \tTCS\n\t Infosys\n\t IBM\n\t wipro\n\t radio mirchi\n\t cognizant\n\t Virtusa")
+
+    elif user in c:
+        txt.insert(END, "\n" + "Bot -> Everything is good and has all facilities \tCentral Library\n\tSeminar Hall\n\t Medical Center\n\t Hostel\n\t Sports & Games\n\t Gymnesium\n\t Cafeteria")
+
+    elif user in d3:
+        txt.insert(END, "\n" + "Bot -> I was developed by team NORMIENOOBIES, is a team of 2 Students \n            named are \n\t1. Vinay Bhandari (E22BCAU0028) \n\t2. Devansh Maid (E22BCAU0035)")
+
+    elif user in b:
+        botanswer = ["Sad to see you go :(", "bye", "come again"]
+        txt.insert(END, "\n" + "Bot -> " + random.choice(botanswer))
+
+
+
+    else:
+
+        txt.insert(END, "\n" + "Bot -> Sorry! I didn't understand that")
+
+    e.delete(0, END)
+
+
+lable1 = Label(root, bg=BG_COLOR, fg=TEXT_COLOR, text="WELCOME TO CHATBOX", font=FONT_BOLD, pady=10, width=60, height=1).grid(
+
+    row=0)
+
+txt = Text(root, bg=BG_COLOR, fg=TEXT_COLOR, font=FONT, width=70)
+
+txt.grid(row=1, column=0, columnspan=2)
+
+scrollbar = Scrollbar(txt)
+
+scrollbar.place(relheight=1, relx=0.974)
+
+e = Entry(root, bg="#2C3E50", fg=TEXT_COLOR, font=FONT, width=55)
+
+e.grid(row=2, column=0)
+
+send = Button(root, text="Send", font=FONT_BOLD, bg=BG_GRAY,
+
+              command=send).grid(row=2, column=1)
+
+root.mainloop()
